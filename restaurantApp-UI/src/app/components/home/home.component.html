@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <div class="container">
+        <div class="col-6">
+            <button class="float-end mx-5 btn btn-success" (click)="Logout()">Logout</button>
+        </div>
+    </div>
+</nav>
+
+<div class="selectBtn">
+    <button class="btn btn-outline-primary" [class.butto]='All_Restaurant' (click)='showAllRestaurants()'>All Restaurant</button>
+    <button class="btn btn-outline-primary" [class.butto] = 'My_Restaurants' (click)='showMyRestaurants()'>My Restaurants</button>
+</div>
+<button class="float-end addBtn btn btn-warning" (click)="add()">Add Restaurant</button>
+<div class="container all-restaurants">
+      <div class="card" style="width: 18rem;height:fit-content;" *ngFor="let restaurant of restaurants">
+        <img [src]="restaurant?.imageUrl" class="card-img-top" alt="..." style="height: 15rem;">
+        <div class="card-body">
+            <strong>{{restaurant.name}}</strong>
+          <p class="card-text">{{restaurant.description}}</p>
+          <div class="edit-del" [class.d-none] = "!My_Restaurants">
+              <button class="btn btn-outline-danger" (click)='deleteRestaurant(restaurant)'>Delete</button>
+              <button class="btn btn-outline-secondary" (click)='editRestaurant(restaurant)'>edit</button>
+          </div>
+        </div>
+      </div>
+</div>
+

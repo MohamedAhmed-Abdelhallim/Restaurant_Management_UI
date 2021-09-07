@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RestaurantService } from 'src/app/services/restaurant.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { RestaurantService } from 'src/app/services/restaurant.service';
 })
 export class LandingComponent implements OnInit {
 
-  constructor(private restaurantService:RestaurantService) { }
+  constructor(private restaurantService:RestaurantService , private router:Router) { }
   restaurants:any = [];
   ngOnInit(): void {
     console.log("laaaaaaaaaaaaaaaaaaaanding")
@@ -21,6 +22,14 @@ export class LandingComponent implements OnInit {
         console.log(err)
       }
     )
+  }
+
+  goToSignup(){
+    this.router.navigate(["/signup"])
+  }
+
+  goToLogin(){
+    this.router.navigate(["/login"])
   }
 
 }
