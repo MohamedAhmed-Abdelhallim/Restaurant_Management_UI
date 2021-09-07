@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <div class="container">
+        <!-- <div class="col-6">
+            <input type="search" class="w-100">
+        </div> -->
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="serach" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+          </div>
+        <div class="col-6">
+            <button class="float-end btn btn-primary">login</button>
+            <button class="float-end mx-5 btn btn-success">SignUp</button>
+        </div>
+    </div>
+</nav>
+<div class="container all-restaurants">
+      <div class="card" style="width: 18rem;height:fit-content;" *ngFor="let restaurant of restaurants">
+        <img [src]="restaurant?.imageUrl" class="card-img-top" alt="..." style="height: 15rem;">
+        <div class="card-body">
+            <strong>{{restaurant.name}}</strong>
+          <p class="card-text">{{restaurant.description}}</p>
+        </div>
+      </div>
+</div>
