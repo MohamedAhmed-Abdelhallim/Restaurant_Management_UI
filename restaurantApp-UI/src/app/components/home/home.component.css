@@ -1,0 +1,46 @@
+.all-restaurants{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: rgb(211, 208, 208);
+    margin-top: 5vh;
+}
+
+.card{
+    margin-right: 3vw;
+    margin-bottom: 3vh;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+strong{
+    color: brown;
+    align-self: center;
+}
+
+.selectBtn{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+.butto{
+    color: white;
+    background-color: blue;
+    margin-right: 2vw;
+}
+
+.edit-del{
+    display: flex;
+    justify-content: space-around;
+}
